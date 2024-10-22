@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="submit.php" method="post" id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="retype_password">Retype Password:</label>
+            <input type="password" id="retype_password" name="retype_password" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" required pattern="\d{10}" title="10 digits required">
+
+            <label for="hobbies">Hobbies:</label>
+            <input type="checkbox" name="hobbies[]" value="Reading"> Reading
+            <input type="checkbox" name="hobbies[]" value="Traveling"> Traveling
+            <input type="checkbox" name="hobbies[]" value="Gaming"> Gaming
+            <input type="checkbox" name="hobbies[]" value="Sports"> Sports
+
+            <label for="city">City:</label>
+            <select id="city" name="city" required>
+                <option value="">Select</option>
+                <option value="NewYork">New York</option>
+                <option value="LosAngeles">Los Angeles</option>
+                <option value="Chicago">Chicago</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
